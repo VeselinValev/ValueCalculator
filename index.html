@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Odd Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+<div class="main-container">
+
+    <h1 class="header-text">expected value calculator</h1>
+    <div class="centered">
+        <div class="odds-system">
+            <input type="radio" name="system" value="Decimal" checked="checked">
+            <h2>Decimal</h2>
+            <!--<input type="radio" name="system" value="Fractional">-->
+            <!--<h2>Fractional</h2>-->
+            <input type="radio" name="system" value="US">
+            <h2>US</h2>
+        </div>
+        <div id="forms">
+            <div id="container0" class="first-form">
+                <form action="">
+                    <input id="checkbox0" type="checkbox" checked="checked">
+                    <label>Odds</label>
+                    <input class="input-field odds" type="number" min="1.00"/>
+                    <label class="align-field ">Win chance (%)</label>
+                    <input class="input-field chance" type="number"/>
+                    <label class="align-field2">Value</label>
+                    <input class="input-field edge edge0" type="number" disabled="disabled"/>
+                    <div class="first-minus-btn"></div>
+                </form>
+            </div>
+        </div>
+        <div id="plus" class="plus-btn"><i class="fa fa-plus"></i></div>
+        <div class="warning-container">
+            <h4 class="warning">Invalid Input! All fields must be completed in the following ranges:</h4>
+            <h4 class="warning">For decimal odds 1.01 to 1000. For US odds -10000 to 99900. For Win chance 0.1 to 100</h4>
+        </div>
+
+
+        <div class="result-section">
+            <div class="info"><i><strong> * The expected value result is calculated based on 1 $ wager.</strong></i>
+            </div>
+            <div class="info"><i><strong> ** Unticking a row will exclude it from the combined value
+                calculation.</strong></i></div>
+            <div class="line"></div>
+            <div class="result-container">
+                <form action="">
+                    <div id="lastBtn" class="first-minus-btn"></div>
+                    <label><strong>Combined odds</strong></label>
+                    <input class="input-field combined-odds" type="text" disabled="disabled"/>
+                    <label><strong>Combined chance (%)</strong></label>
+                    <input class="input-field combined-chance" type="text" disabled="disabled"/>
+                    <label><strong>Combined value ($)</strong></label>
+                    <input class="input-field expected-value" type="text" disabled="disabled"/>
+                </form>
+            </div>
+            <div class="calculate-btn">
+                <button id="reset">Reset</button>
+                <button id="calculate">Calculate</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>run();</script>
+
+</html>

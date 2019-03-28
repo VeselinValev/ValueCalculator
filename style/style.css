@@ -1,0 +1,332 @@
+body{
+    /*background-color: #fbab41;*/
+    /*background-color: #e9c1aa;*/
+    background-color: rgb(240,240,240);
+    font-family: 'Ubuntu', sans-serif;
+    height: 90vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+input{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(240,240,240);
+}
+
+input:focus{
+    outline: none;
+    background-color: #fdf0a5;
+}
+
+form{
+    padding-top: 5px;
+    /*padding-bottom: 10px;*/
+    width: 100%;
+}
+
+h1{
+    text-shadow: 2px 2px rgb(60,60,60);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 3px;
+    padding-bottom: 35px;
+    margin-bottom: 0px;
+    /*padding-top: 10px;*/
+    border-bottom: 3px solid rgb(60,60,60);
+    color: rgb(60,60,60)
+}
+
+
+.form-container{
+    background-color: rgb(60,60,60);
+    display: flex;
+    max-width: 82%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0,0,0);
+    animation: moveInItem 0.3s ease-in;
+}
+
+label{
+    color: rgb(180,180,180);
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.align-field{
+    margin-left: 70px;
+}
+
+.align-field2{
+    margin-left: 100px;
+}
+
+.result-container label{
+    margin-left: 20px;
+    color: black;
+    font-weight: 400;
+}
+
+input[type=checkbox]{
+    vertical-align: middle;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.plus-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(60,60,60);
+    text-align: center;
+    font-size: 38px;
+    color: #96fd9d;
+    box-shadow: 0 3px 3px rgb(0,0,0);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#plus{
+    display: inline-block;
+}
+
+.minus-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+    font-size: 38px;
+    color: #fc7373;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: middle;
+    margin-bottom: 24px;
+    max-height: 20px;
+}
+
+.first-minus-btn{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    font-size: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 24px;
+    max-height: 20px;
+}
+
+.minus-btn:hover{
+    color: #d70404;
+}
+
+.plus-btn:hover{
+
+    background-color: rgb(200,200,200);
+    color: #32a003;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="radio"] {
+    transform: scale(.8);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+@keyframes moveInItem {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.odds-system{
+
+}
+
+h2{
+    display: inline-block;
+    margin-left: -20px;
+    margin-right: -20px;
+    color: black;
+}
+
+.result-section{
+    margin-top: 30px;
+    max-width: 82%;
+}
+
+.result-container{
+    /*background-color: #395aa2;*/
+    background-color: rgba(60,60,60,0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0,0,0);
+    padding-top: 5px;
+    padding-bottom: 7px;
+
+}
+
+.line{
+    border-top: 3px solid rgb(60,60,60);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lastBtn{
+    /*background-color: #395aa2;*/
+    background-color: transparent;
+    margin-left: 3px;
+}
+
+.wager{
+    background-color: black;
+}
+
+.calculate-btn{
+    width: 100%;
+    text-align: center;
+}
+
+#calculate{
+    margin-left:50px;
+    transition: all 0.3s;
+}
+
+.calculate-btn button:focus{
+    outline: none;
+}
+
+.disappear{
+    animation: moveOutItem 0.3s ease-out;
+}
+
+@keyframes moveOutItem {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+}
+
+.disable{
+    background-color: lightgray !important;
+}
+
+.combined-odds{
+    margin-left: -5px;
+}
+
+.expected-value{
+    margin-left: -10px;
+}
+.red-number{
+    color: #fa0000;
+}
+
+.green-number{
+    color: #0ea800;
+}
+
+.neutral-number{
+    color: black;
+}
+
+.dull-font{
+    color: lightgray;
+}
+.info{
+    width: 100%;
+    text-align: right;
+}
+
+#calculate:hover{
+    background-color: #3b609b;
+    color: rgb(200,200,200);;
+}
+
+#reset:hover{
+    background-color:#b63935;
+    color: rgb(200,200,200);
+}
+#reset{
+    background-color: #d36c69 ;
+    color: black;
+    margin-left: 400px;
+    transition: all 0.3s;
+}
+
+.calculate-btn button{
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 3px rgb(0,0,0);
+    font-size: 20px;
+    /*background-color: #5297ff;*/
+    background-color: #5297ff;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.centered{
+    margin-left: 200px;
+}
+
+.first-form{
+    background-color: rgb(60,60,60);
+    display: flex;
+    max-width: 82%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0,0,0);
+}
+
+.warning{
+    color: red;
+    display: inline-block;
+    /*margin-left: 200px;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.warning-container{
+    width: 82%;
+    border: 2px solid red;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: #eabab8;
+    /*box-shadow: 0 3px 3px rgb(0,0,0);*/
+    display: none;
+    text-align: center;
+}
