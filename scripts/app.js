@@ -85,15 +85,15 @@ function run() {
                     }
                     if (this.value < 0){
                         let decimal = (Math.abs((100 / this.value)) + 1).toFixed(2);
-                        totalOdds *= decimal;
+                        totalOdds *= +decimal;
                         arrayOdds.push(decimal);
                     }else if (this.value >= 100){
                         let decimal = ((this.value / 100) + 1).toFixed(2);
-                        totalOdds *= decimal;
+                        totalOdds *= +decimal;
                         arrayOdds.push(decimal);
                     }else{
                         let decimal = (2).toFixed(2);
-                        totalOdds *= decimal;
+                        totalOdds *= +decimal;
                         arrayOdds.push(decimal);
                     }
                 }
@@ -186,7 +186,7 @@ function run() {
                     if (odds >= 2){
                         $(this).val(((odds - 1) * 100).toFixed(2));
                     }else{
-                        $(this).val(Math.floor(-100/(odds -1)).toFixed(2));
+                        $(this).val((-100/(odds -1)).toFixed(2));
                     }
                 }
 
@@ -201,9 +201,8 @@ function run() {
                     }
                 }
             });
-        }else{
+        }else if (radioValue === "Decimal"){
             $('.odds').each(function (index, value) {
-
                 if ($(this).val()) {
                     let odds = $(this).val();
                     if (this.value < -100) {
@@ -217,7 +216,6 @@ function run() {
                 }
             });
             $('.combined-odds').each(function (index, value) {
-                console.log(index)
                 if ($(this).val()) {
                     let odds = $(this).val();
                     if (this.value < -100) {
@@ -229,6 +227,8 @@ function run() {
                     }
                 }
             })
+        }else{
+
         }
     })
 
